@@ -10,6 +10,7 @@ const addFriendButton = document.getElementById('add-friend-button');
 // initialize state
 
 let mushroomCount = 3;
+let magicCount = 0;
 
 const friendData = [
     {
@@ -31,16 +32,16 @@ const friendData = [
 ];
 
 addMushroomButton.addEventListener('click', () => {
-    if (Math.random() > 0.9) {
+    if (Math.random() > 0.5) {
         alert('found a mushroom!');
 
         mushroomCount++;
         displayMushrooms();
-    } else if (Math.random() > 0.1) {
+    } else if (Math.random() > 0.6) {
         alert('found a magic mushroom!!!');
 
-        mushroomCount++;
-        displayMagMushrooms();
+        magicCount++;
+        displayMushrooms();
     } else {
         alert('no luck!');
     }
@@ -95,15 +96,10 @@ function displayMushrooms() {
         const mushroom = renderMushroom(i);
         mushroomsEl.append(mushroom);
     }
-}
-
-function displayMagMushrooms() {
-    // clear out the mushroom div
-    mushroomsEl.textContent = '';
-    for (let i = 0; i < mushroomCount; i++) {
+    for (let e = 0; e < magicCount; e++) {
         // for each mushroom in your mushroom state, render and append a mushroom
-        const mushroom = renderMagMushroom(i);
-        mushroomsEl.append(mushroom);
+        const magicMushroom = renderMagMushroom(e);
+        mushroomsEl.append(magicMushroom);
     }
 }
 
