@@ -38,7 +38,7 @@ addMushroomButton.addEventListener('click', () => {
 
         mushroomCount++;
         displayMushrooms();
-    } else if (magicCount < 1 && Math.random() > 0.6) {
+    } else if (magicCount < 1 && Math.random() > 0.7) {
         alert('found a magic mushroom!!!');
 
         magicCount++;
@@ -49,7 +49,8 @@ addMushroomButton.addEventListener('click', () => {
 });
 
 eatMagicButton.addEventListener('click', () => {
-    magicCount = 0;
+    magicCount--;
+    displayMushrooms;
 });
 
 addFriendButton.addEventListener('click', () => {
