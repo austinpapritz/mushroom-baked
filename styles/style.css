@@ -93,7 +93,8 @@ main .forest {
 
 .forest {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: start;
 }
 
 .header-button {
@@ -213,6 +214,18 @@ footer {
     background-image: url('../assets/porcini.png');
 }
 
+.mushroom-mag {
+    width: 100px;
+    height: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url('../assets/magic-mushroom.png');
+}
+
 label {
     font-size: 2rem;
+}
+
+.hide {
+    display: none;
 }

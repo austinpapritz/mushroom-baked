@@ -5,6 +5,13 @@ export function renderMushroom() {
     return div;
 }
 
+export function renderMagMushroom() {
+    const div = document.createElement('div');
+    div.classList.add('mushroom-mag');
+
+    return div;
+}
+
 export function renderFriend(friend) {
     const div = document.createElement('div');
     const nameEl = document.createElement('p');
