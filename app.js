@@ -51,6 +51,11 @@ addMushroomButton.addEventListener('click', () => {
 eatMagicButton.addEventListener('click', () => {
     magicCount--;
     displayMushrooms();
+    for (let friend of friendData) {
+        friend.satisfaction = 3;
+    }
+    alert('Everyone feels great! Invite more friends!!');
+    displayFriends();
 });
 
 addFriendButton.addEventListener('click', () => {
