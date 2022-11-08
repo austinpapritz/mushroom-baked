@@ -92,6 +92,8 @@ function displayFriends() {
                 mushroomCount--;
                 displayMushrooms();
                 displayFriends();
+            } else if (friend.satisfaction < 3 && mushroomCount === 0) {
+                alert('You need to go mushroom hunting!');
             }
         });
         friendsEl.append(friendEl);
