@@ -50,7 +50,7 @@ addMushroomButton.addEventListener('click', () => {
 
 eatMagicButton.addEventListener('click', () => {
     magicCount--;
-    displayMushrooms;
+    displayMushrooms();
 });
 
 addFriendButton.addEventListener('click', () => {
