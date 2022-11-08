@@ -5,6 +5,7 @@ const friendsEl = document.querySelector('.friends');
 const friendInputEl = document.getElementById('friend-input');
 const mushroomsEl = document.querySelector('.mushrooms');
 const addMushroomButton = document.getElementById('add-mushroom-button');
+const eatMagicButton = document.getElementById('eat-magic-button');
 const addFriendButton = document.getElementById('add-friend-button');
 
 // initialize state
@@ -37,7 +38,7 @@ addMushroomButton.addEventListener('click', () => {
 
         mushroomCount++;
         displayMushrooms();
-    } else if (Math.random() > 0.6) {
+    } else if (magicCount < 1 && Math.random() > 0.6) {
         alert('found a magic mushroom!!!');
 
         magicCount++;
@@ -45,6 +46,10 @@ addMushroomButton.addEventListener('click', () => {
     } else {
         alert('no luck!');
     }
+});
+
+eatMagicButton.addEventListener('click', () => {
+    magicCount = 0;
 });
 
 addFriendButton.addEventListener('click', () => {
@@ -100,6 +105,11 @@ function displayMushrooms() {
         // for each mushroom in your mushroom state, render and append a mushroom
         const magicMushroom = renderMagMushroom(e);
         mushroomsEl.append(magicMushroom);
+    }
+    if (magicCount > 0) {
+        eatMagicButton.classList.remove('hide');
+    } else {
+        eatMagicButton.classList.add('hide');
     }
 }
 

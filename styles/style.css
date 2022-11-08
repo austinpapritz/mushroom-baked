@@ -93,7 +93,8 @@ main .forest {
 
 .forest {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: start;
 }
 
 .header-button {
@@ -223,4 +224,8 @@ footer {
 
 label {
     font-size: 2rem;
+}
+
+.hide {
+    display: none;
 }
